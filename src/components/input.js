@@ -14,12 +14,13 @@ export default SSInput;
 
 const InputBox = styled.div`
   border: none;
-  margin: 0px;
+  margin: 10px;
   outline: none;
   ${({ size }) => sizeCSS[size]}
   ${flexCenter}
+  position: relative;
 
-    & input {
+  & input {
     width: 100%;
     height: 100%;
     border: 1px solid black;
@@ -27,18 +28,18 @@ const InputBox = styled.div`
 
   & label {
     font-size: ${({ theme }) => theme.FONT_SIZE.medium};
-    width: 50px;
+    width: 120px;
     height: 100%;
   }
 `;
 
 const sizeCSS = {
   small: css`
-    width: 200px;
+    width: 250px;
     height: 20px;
   `,
   medium: css`
-    width: 400px;
+    width: 300px;
     height: 40px;
   `,
   large: css`

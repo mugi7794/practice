@@ -35,13 +35,13 @@ const sizeCSS = {
   xsmall: css`
     font-size: ${({ theme }) => theme.FONT_SIZE.xsmall};
     width: 50px;
-    height: 15px;
+    height: 19px;
     padding: auto;
   `,
   small: css`
     font-size: ${({ theme }) => theme.FONT_SIZE.small};
     width: 76px;
-    height: 23px;
+    height: 26px;
     padding: auto;
   `,
   medium: css`
@@ -66,7 +66,7 @@ const sizeCSS = {
 
 const shapeCSS = {
   normal: css`
-    border-radius: 10px;
+    border-radius: 5px;
   `,
   round: css`
     border-radius: 50%;

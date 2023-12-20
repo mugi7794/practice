@@ -12,7 +12,7 @@ export default {
   //         </BrowserRouter>
   //     )
   // ]
-  argTypes: { variant: { control: "radio" }, size: { control: "select" } },
+  argTypes: { variant: { control: "radio" }, size: { control: "radio" } },
 };
 
 export const Primary = {

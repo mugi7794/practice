@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
+import { flexCenter } from "../styles/common.style";
 
-const SSSelect = ({ label, variant, data }) => {
+const SSSelect = ({ label, variant, data, name }) => {
   return (
     <SelectBox variant={variant}>
-      <label>{label}</label>
-      <select>
+      <Label>{label}</Label>
+      <select name={name}>
         {data.map((item) => (
           <option>{item}</option>
         ))}
@@ -17,7 +18,7 @@ export default SSSelect;
 
 const variantCSS = {
   primary: css`
-    background-color: ${({ theme }) => theme.COLORS.primary[100]};
+    background-color: ${({ theme }) => theme.COLORS.primary[300]};
     color: ${({ theme }) => theme.COLORS.white};
   `,
   secondary: css`
@@ -27,21 +28,26 @@ const variantCSS = {
 };
 
 const SelectBox = styled.div`
-  width: 150px;
   height: 35px;
-  padding: 5px 30px 5px 10px;
   border-radius: 4px;
+  ${flexCenter}
 
   & select {
     ${({ variant }) => variantCSS[variant]}
     border-radius: 4px;
     padding: 4px;
     font-size: ${({ theme }) => theme.FONT_SIZE.small};
+    width: 50px;
   }
 
   & select > option {
     ${({ variant }) => variantCSS[variant]}
     font-size: ${({ theme }) => theme.FONT_SIZE.small};
     padding: 4px;
+    text-align: center;
   }
+`;
+
+const Label = styled.label`
+  padding: 0;
 `;
