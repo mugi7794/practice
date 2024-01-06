@@ -7,7 +7,7 @@ import Messages from "../components/Messages/Messages";
 import Input from "../components/Input/Input";
 import TextContainer from "../components/TextContainer/TextContainer";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "http://localhost:3000";
 let socket;
 
 const Chat = () => {
@@ -30,7 +30,7 @@ const Chat = () => {
       }
     });
     return () => {
-      socket.emit("disconnect");
+      socket.disconnect();
       socket.off();
     };
   }, [ENDPOINT, window.location.search]);
